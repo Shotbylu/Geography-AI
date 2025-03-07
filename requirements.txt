@@ -1,0 +1,20 @@
+albumentations
+contextily
+geopandas
+huggingface_hub
+jupyter-server-proxy
+leafmap
+localtileserver
+mapclassify
+overturemaps
+planetary-computer
+pystac-client
+rasterio
+rioxarray
+scikit-image
+scikit-learn
+# segment-geospatial
+torch
+torchgeo
+tqdm
+transformers

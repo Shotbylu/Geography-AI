@@ -1,0 +1,118 @@
+site_name: geoai
+site_description: A Python package for using Artificial Intelligence (AI) with geospatial data
+site_author: opengeos
+site_url: https://geoai.gishub.org
+repo_url: https://github.com/opengeos/geoai
+
+copyright: "Copyright &copy; 2023 - 2025 Qiusheng Wu"
+
+theme:
+    palette:
+        - scheme: default
+          #   primary: blue
+          #   accent: indigo
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+    name: material
+    icon:
+        repo: fontawesome/brands/github
+    # logo: assets/logo.png
+    # favicon: assets/favicon.png
+    features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.top
+        - search.highlight
+        - search.share
+    custom_dir: "docs/overrides"
+    font:
+        text: Google Sans
+        code: Regular
+
+plugins:
+    - search
+    - mkdocstrings
+    - git-revision-date
+    - git-revision-date-localized:
+          enable_creation_date: true
+          type: timeago
+    # - pdf-export
+    - mkdocs-jupyter:
+          include_source: True
+          ignore_h1_titles: True
+          execute: true
+          allow_errors: false
+          ignore: ["conf.py"]
+          execute_ignore:
+              [
+                  "examples/dataviz/*.ipynb",
+                  "examples/rastervision/*.ipynb",
+                  "examples/samgeo/*.ipynb",
+                  "examples/data_visualization.ipynb",
+                  "examples/download_data.ipynb",
+              ]
+
+markdown_extensions:
+    - admonition
+    - abbr
+    - attr_list
+    - def_list
+    - footnotes
+    - meta
+    - md_in_html
+    - pymdownx.superfences
+    - pymdownx.highlight:
+          linenums: true
+    - toc:
+          permalink: true
+
+# extra:
+#     analytics:
+#         provider: google
+#         property: UA-XXXXXXXXX-X
+
+nav:
+    - Home: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Contributing: contributing.md
+    - FAQ: faq.md
+    - Changelog: https://github.com/opengeos/geoai/releases
+    - Report Issues: https://github.com/opengeos/geoai/issues
+    - Examples:
+          - examples/download_data.ipynb
+          - examples/view_metadata.ipynb
+          - examples/image_chips.ipynb
+          - examples/building_footprints_usa.ipynb
+          - examples/building_regularization.ipynb
+          - examples/geometric_properties.ipynb
+          - examples/data_visualization.ipynb
+          - examples/samgeo/satellite.ipynb
+          - examples/samgeo/automatic_mask_generator.ipynb
+          - examples/samgeo/automatic_mask_generator_hq.ipynb
+          - examples/samgeo/input_prompts.ipynb
+          - examples/samgeo/input_prompts_hq.ipynb
+          - examples/samgeo/box_prompts.ipynb
+          - examples/samgeo/text_prompts.ipynb
+          - examples/samgeo/text_prompts_batch.ipynb
+          - examples/samgeo/fast_sam.ipynb
+          - examples/samgeo/swimming_pools.ipynb
+          - examples/samgeo/arcgis.ipynb
+          - examples/samgeo/maxar_open_data.ipynb
+          - examples/rastervision/semantic_segmentation.ipynb
+          - examples/dataviz/raster_viz.ipynb
+          - examples/dataviz/vector_viz.ipynb
+          - examples/dataviz/lidar_viz.ipynb
+    - API Reference:
+          - geoai module: geoai.md
+          - download module: download.md
+          - extract module: extract.md
+          - segmentation module: segmentation.md
+          - utils module: utils.md
